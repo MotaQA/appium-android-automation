@@ -11,7 +11,7 @@ describe('My Login application', () => {
         await expect($(LoginScreen.errorMessage)).toHaveText('Provided credentials do not match any user in this service.')
     })
 
-    it('should login with invalid credentials', async () => {
+    it('should login with valid credentials', async () => {
         await MenuScreen.accessLoginScreen()
         await LoginScreen.fillLoginForm(userData.userSuccess.username, userData.userSuccess.password)
         await expect($(LoginScreen.errorMessage)).toHaveText('Provided credentials do not match any user in this service.')
